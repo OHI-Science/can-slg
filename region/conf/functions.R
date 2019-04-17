@@ -152,7 +152,7 @@ FIS <- function(layers) {
            method) %>%
     dplyr::filter(year == scen_year)
 
-  write.csv(gap_fill_data, here('eez/temp/FIS_summary_gf.csv'), row.names = FALSE)
+  write.csv(gap_fill_data, here('region/temp/FIS_summary_gf.csv'), row.names = FALSE)
 
   status_data <- data_fis_gf %>%
     dplyr::select(region_id, stock_id, year, catch, score)
@@ -539,7 +539,7 @@ NP <- function(scores, layers) {
       dplyr::mutate(gapfilled = ifelse(is.na(exposure), 1, 0)) %>%
       dplyr::mutate(method = ifelse(is.na(exposure), "prod_average", NA)) %>%
       dplyr::select(rgn_id = region_id, product, year, gapfilled, method)
-    write.csv(gap_fill, here('eez/temp/NP_exposure_gf.csv'), row.names = FALSE)
+    write.csv(gap_fill, here('region/temp/NP_exposure_gf.csv'), row.names = FALSE)
 
     ### add exposure for countries with (habitat extent == NA)
     np_exp <- np_exp %>%
@@ -791,7 +791,7 @@ CS <- function(layers) {
 
   write.csv(
     weights,
-    sprintf(here("eez/temp/element_wts_cs_km2_x_storage_%s.csv"), scen_year),
+    sprintf(here("region/temp/element_wts_cs_km2_x_storage_%s.csv"), scen_year),
     row.names = FALSE
   )
 
@@ -954,7 +954,7 @@ CP <- function(layers) {
 
   write.csv(
     weights,
-    sprintf(here("eez/temp/element_wts_cp_km2_x_protection_%s.csv"), scen_year),
+    sprintf(here("region/temp/element_wts_cp_km2_x_protection_%s.csv"), scen_year),
     row.names = FALSE
   )
 
@@ -1228,52 +1228,6 @@ ICO <- function(layers) {
     dplyr::mutate('goal' = 'ICO') %>%
     dplyr::select(goal, dimension, region_id, score) %>%
     data.frame()
-
-  ## Gapfill Oecussi Ambeno (rgn 237) with East Timor (rgn 231) data
-  ## Oecussi Ambeno is an enclave within East Timor, so the data should be very similar
-  go <- dplyr::filter(scores, region_id == 231) %>%
-    dplyr::mutate(region_id = 237)
-  scores <- rbind(scores, go)
-
-
-  ## gapfill missing regions with average scores/trends of regions that share same UN geopolitical region
-  un_regions <- georegions %>%
-    dplyr::select(region_id = rgn_id, r2)
-
-  # ID missing regions:
-  regions <- SelectLayersData(layers, layers = c('rgn_global')) %>%
-    dplyr::select(region_id = id_num)
-  regions_NA <- setdiff(regions$region_id, scores$region_id)
-
-  scores_NA <- data.frame(
-    goal = "ICO",
-    dimension = rep(c("status", "trend"),
-                    each = length(regions_NA)),
-    region_id = regions_NA,
-    score = NA
-  )
-
-  scores <- scores %>%
-    rbind(scores_NA) %>%
-    dplyr::mutate(region_id = as.numeric(region_id)) %>%
-    dplyr::left_join(un_regions, by = "region_id") %>%
-    dplyr::group_by(dimension, r2) %>%
-    dplyr::mutate(score_gf = mean(score, na.rm = TRUE)) %>%
-    dplyr::arrange(dimension, region_id) %>%
-    data.frame()
-
-  # save gapfilling records
-  scores_gf <- scores %>%
-    dplyr::mutate(gapfilled = ifelse(is.na(score) &
-                                !is.na(score_gf), "1", "0")) %>%
-    dplyr::mutate(method = ifelse(
-      is.na(score) &
-        !is.na(score_gf),
-      "UN geopolitical avg. (r2)",
-      NA
-    )) %>%
-    dplyr::select(goal, dimension, region_id, gapfilled, method)
-  write.csv(scores_gf, here("eez/temp/ICO_status_trend_gf.csv"), row.names = FALSE)
 
   scores <- scores %>%
     dplyr::mutate(score2 = ifelse(is.na(score), score_gf, score)) %>%
@@ -1567,7 +1521,7 @@ HAB <- function(layers) {
     dplyr::select(rgn_id = region_id, habitat, boolean, layer)
 
   write.csv(weights,
-            sprintf(here("eez/temp/element_wts_hab_pres_abs_%s.csv"), scen_year),
+            sprintf(here("region/temp/element_wts_hab_pres_abs_%s.csv"), scen_year),
             row.names = FALSE)
 
   layers$data$element_wts_hab_pres_abs <- weights
