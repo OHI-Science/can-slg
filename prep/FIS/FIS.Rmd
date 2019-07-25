@@ -1,0 +1,197 @@
+---
+title: "Food Provision"
+output: html_document
+---
+
+# Wild Caught Fisheries
+
+```{r}
+library(sf)
+library(ggplot2)
+library(tidyverse)
+library(googlesheets)
+
+```
+
+The wild caught fishers subgoal is largely based on Fisheries and Ocean Canada's (DFO) [Sustainability survey for fisheries](https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/survey-sondage/index-en.html)
+
+## Create shapefiles for LFAs, CFAs, and SFAs
+
+First fishing area boundaries were gathered from various sub-optimal sources (i.e. PDFs). See (link) for details.
+
+```{r, eval=FALSE}
+# coords <- read.csv("DFO_fisheries_zones_Coordinates.csv") %>% 
+coords <- read.csv("DFO_fisheries_zones - Coordinates.csv") %>% 
+  separate(Latitude_DDMMSS,into = c("Latitude_DD","Latitude_MM","Latitude_SS"), sep=" ") %>% 
+  separate(Longitude_DDMMSS,into = c("Longitude_DD","Longitude_MM","Longitude_SS"), sep=" ") %>% 
+  rowwise() %>% 
+  mutate(Latitude=sum(as.numeric(Latitude_DD),as.numeric(Latitude_MM)/60,as.numeric(Latitude_SS)/3600,na.rm=TRUE),
+         Longitude=-sum(as.numeric(Longitude_DD),as.numeric(Longitude_MM)/60,as.numeric(Longitude_SS)/3600,na.rm=TRUE),
+         ID=paste(Type,Number))%>%
+  st_as_sf(coords=c("Longitude","Latitude"), crs = 4267)
+```
+
+Since these PDFs only provide points where the fishing areas touch the coast, points were added to `DFO_fisheries_zones - Coordinates.csv` manually to contour bays and inlets that would otherwise be excluded. These point were added in decimal degrees while the original point are DMS.
+
+```{r, eval=FALSE}
+library(mapview)
+library(mapedit)
+IDs="SSFA 1, 2, 3, 4"
+test <- mapview(coords %>% filter(ID==IDs)) %>%
+  editMap("coords")
+
+st_coordinates(test$drawn)[,2] %>% write.table(row.names = F,col.names = F)
+print("")
+-st_coordinates(test$drawn)[,1] %>% write.table(row.names = F,col.names = F)
+```
+Polygons were then plotted one by one to make sure they are accurate.
+
+```{r, eval=FALSE}
+test <- read.csv("DFO_fisheries_zones - Coordinates.csv") %>% 
+  separate(Latitude_DDMMSS,into = c("Latitude_DD","Latitude_MM","Latitude_SS"), sep=" ") %>% 
+  separate(Longitude_DDMMSS,into = c("Longitude_DD","Longitude_MM","Longitude_SS"), sep=" ") %>% 
+  rowwise() %>% 
+  mutate(Latitude=sum(as.numeric(Latitude_DD),as.numeric(Latitude_MM)/60,as.numeric(Latitude_SS)/3600,na.rm=TRUE),
+         Longitude=-sum(as.numeric(Longitude_DD),as.numeric(Longitude_MM)/60,as.numeric(Longitude_SS)/3600,na.rm=TRUE),
+         ID=paste(Type,Number))
+
+test <- test %>% filter(ID==IDs) %>%
+  select(Longitude,Latitude) %>% 
+  as.matrix() %>% 
+  list %>%
+  st_polygon() %>%
+  st_sfc(crs=4326)
+
+mapview(test)
+```
+
+## Combine polygons to match management areas
+
+Load all the files
+
+```{r}
+# standardized projection
+# Everything below here must be transformed
+proj <- "+proj=lcc +lat_1=46 +lat_2=60 +lat_0=44 +lon_0=-68.5 +x_0=0 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"
+
+survey <- read.csv("2017_-_Sustainability_Survey_for_Fisheries_-_EN.csv", stringsAsFactors = FALSE) %>% left_join(read.csv("DFO_fisheries_zones - Zones.csv", stringsAsFactors = FALSE),by = c("New.Stock.Names", "Old.Stock.Names", "Species.Group", "Region")) %>% 
+  filter(!is.na(Zone)) %>%
+  select(New.Stock.Names, 
+         Region, 
+         Zone, 
+         Data, 
+         Website, 
+         Section.1...What.is.the.current.status.zone.for.this.stock.,
+         Section.1...Since.the.stock.status.zone.for.this.stock.is.uncertain..select.an.option.) 
+
+FAs <- read.csv("DFO_fisheries_zones - Coordinates.csv", stringsAsFactors = FALSE) %>% 
+  separate(Latitude_DDMMSS,into = c("Latitude_DD","Latitude_MM","Latitude_SS"), sep=" ") %>% 
+  separate(Longitude_DDMMSS,into = c("Longitude_DD","Longitude_MM","Longitude_SS"), sep=" ") %>% 
+  rowwise() %>% 
+  mutate(Latitude=sum(as.numeric(Latitude_DD),as.numeric(Latitude_MM)/60,as.numeric(Latitude_SS)/3600,na.rm=TRUE),
+         Longitude=-sum(as.numeric(Longitude_DD),as.numeric(Longitude_MM)/60,as.numeric(Longitude_SS)/3600,na.rm=TRUE),
+         ID=paste(Type,Number)) %>%
+  group_by(ID) %>%
+  st_as_sf(coords = c("Longitude", "Latitude"), crs = 4326) %>%
+  summarise(geometry = st_combine(geometry)) %>%
+  st_cast("POLYGON") %>% 
+  st_transform(proj)
+
+NAFO <- read_sf("NAFODivisions/Divisions.shp") %>% 
+  mutate(ID=ZONE) %>% 
+  select(ID)%>% 
+  st_transform(proj)
+
+regions <- read_sf("../../region/spatial/regions_gcs.geojson") %>% 
+  st_transform(proj) %>% 
+  st_buffer(0.0)
+```
+
+Populate the NAFO and other fishing areas.
+
+```{r}
+# NAFO 4RST is missing
+
+NAFO <- NAFO %>% 
+  
+  filter(ID %in% c("4R", "4S", "4T")) %>% 
+  st_union() %>% 
+  st_sf() %>% 
+  mutate(ID = "4RST") %>% 
+  rbind(NAFO) 
+  
+  
+missing <- c("LFA 23, 24, 25, 26A, 26B",
+             "LFA 23, 24, 25, 26A",
+             "SFA 21A, 21B, 21C, 22, 23, 24",
+             "CFA 12, 18, 25, 26, 12E, 12F, 19",
+             "SFA 16E, 16F, 18A",
+             "SSFA 1, 2, 3, 4, 5")
+
+
+for(i in missing){
+  z <- gsub(", "," ",i) %>% 
+    strsplit(" ") %>% 
+    unlist()
+  
+  
+  if(length(z)-1==nrow(filter(FAs,ID %in% paste(z[1],z[-1])) )){
+    unioned <- FAs %>% 
+    filter(ID %in% paste(z[1],z[-1])) %>% 
+    st_union() %>% 
+    st_sf() %>% 
+    mutate(ID = i) 
+  
+    FAs <- rbind(unioned,FAs)
+  }  else if(i=="SSFA 1, 2, 3, 4, 5"){
+    unioned <- FAs %>% 
+    filter(ID %in% c("SSFA 1, 2, 3, 4","SSFA 5")) %>% 
+    st_union() %>% 
+    st_sf() %>% 
+    mutate(ID = i) 
+  
+    FAs <- rbind(unioned,FAs)
+  } else {
+    print(z)
+  }
+}
+
+
+
+```
+
+Join areas and surveys
+
+```{r}
+survey <- survey %>% 
+  left_join(rbind(FAs,NAFO),by=c("Zone"="ID")) %>% 
+  st_sf(crs = proj)
+```
+
+
+
+## Score the survey
+
+```{r}
+weights <- data.frame(status=c("Critical Zone", "Cautious Zone", "Healthy Zone", "Uncertain", "Uncertain", "Uncertain"),
+                      risk = c("","","","Serious harm unlikely", "Serious harm possible", "Serious harm likely"),
+                      score = c(0,0.5,1,0.5,0.25,0),
+                      stringsAsFactors = FALSE)
+weights
+
+summary <- survey %>% 
+  left_join(weights,
+            by=c("Section.1...What.is.the.current.status.zone.for.this.stock."="status",
+                 "Section.1...Since.the.stock.status.zone.for.this.stock.is.uncertain..select.an.option."="risk"))  %>% 
+  st_intersection(regions) %>% 
+  mutate(area=as.numeric(st_area(.$geometry))) %>% 
+  as.data.frame() %>% 
+  group_by(rgn_id) %>% 
+  summarize(status=weighted.mean(score,area))
+```
+## Plot
+```{r}
+ggplot(regions %>% left_join(summary,by="rgn_id"))+
+  geom_sf(aes(fill=status))
+```
+

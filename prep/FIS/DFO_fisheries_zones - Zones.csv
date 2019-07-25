@@ -1,0 +1,180 @@
+New Stock Names,Old Stock Names,Species Group,Region,Zone,Data,Website
+Arctic Char - Cambridge Bay,Arctic Char – Cambridge Bay,Salmonids,Central and Arctic,NA,NA,NA
+Arctic Char - Cumberland Sound,Arctic Char – Cumberland Sound,Salmonids,Central and Arctic,NA,NA,NA
+Atlantic Walrus - Baffin Bay (High Arctic),Atlantic Walrus - Baffin Bay (High Arctic),Marine Mammals,Central and Arctic,NA,NA,NA
+Atlantic Walrus - Foxe Basin (Central Arctic),Atlantic Walrus – Foxe Basin (Central Arctic),Marine Mammals,Central and Arctic,NA,NA,NA
+Atlantic Walrus - Hudson Bay-Davis Strait (Central Arctic),Atlantic Walrus – Hudson Bay-Davis Strait (Central Arctic),Marine Mammals,Central and Arctic,NA,NA,NA
+Atlantic Walrus - Penny Strait-Lancaster Sound (High Arctic),Atlantic Walrus – Penny Strait-Lancaster Sound (High Arctic),Marine Mammals,Central and Arctic,NA,NA,NA
+Atlantic Walrus - South and East Hudson Bay,Atlantic Walrus – South and East Hudson Bay,Marine Mammals,Central and Arctic,NA,NA,NA
+Atlantic Walrus - West Jones Sound (High Arctic),Atlantic Walrus – West Jones Sound (High Arctic,Marine Mammals,Central and Arctic,NA,NA,NA
+Beluga - Cumberland Sound,Beluga – Cumberland Sound,Marine Mammals,Central and Arctic,NA,NA,NA
+Bowhead - Eastern Canada - West Greenland (ECWG),Bowhead - Eastern Canada - West Greenland (ECWG),Marine Mammals,Central and Arctic,NA,NA,NA
+Greenland Halibut - Cumberland Sound,Greenland Halibut - Cumberland Sound,Groundfish,Central and Arctic,NA,NA,NA
+Greenland Halibut - NAFO 0A and 0B,Greenland Halibut – NAFO 0A and 0B,Groundfish,Central and Arctic,NA,NA,NA
+Lake Trout - Great Slave Lake,Lake Trout - Great Slave Lake,Salmonids,Central and Arctic,NA,NA,NA
+Lake Whitefish - Great Slave Lake,Lake Whitefish – Great Slave Lake,Groundfish,Central and Arctic,NA,NA,NA
+Narwhal - (EHA BB) Admiralty Inlet,Narwhal – (EHA BB) Admiralty Inlet,Marine Mammals,Central and Arctic,NA,NA,NA
+Narwhal - East Baffin,East Baffin Narwhal,Marine Mammals,Central and Arctic,NA,NA,NA
+Narwhal - Eclipse Sound,Eclipse Sound Narwhal,Marine Mammals,Central and Arctic,NA,NA,NA
+Narwhal - Northern Hudson Bay,Narwhal – Northern Hudson Bay,Marine Mammals,Central and Arctic,NA,NA,NA
+Narwhal - Smith/Jones/Parry,Smith/Jones/Parry Narwhal,Marine Mammals,Central and Arctic,NA,NA,NA
+Narwhal - Somerset,Somerset Narwhal,Marine Mammals,Central and Arctic,NA,NA,NA
+"North Slope Dolly Varden - Big Fish, Rat, Firth, Babbage, Vittrekwa","North Slope Dolly Varden - Big Fish, Rat, Firth, Babbage, Vittrekwa",Salmonids,Central and Arctic,NA,NA,NA
+American Plaice - Southern Gulf of St. Lawrence (4T),"Plaice (American), Southern Gulf of St. Lawrence - 4T",Groundfish,Gulf,4T,Shapefile,https://www.nafo.int/Data/GIS
+Atlantic Salmon - Gulf,Atlantic Salmon,Salmonids,Gulf,Gulf,,
+Cod - Southern Gulf of St. Lawrence (4TVn),"Cod, Southern Gulf of St. Lawrence - 4TVn",Groundfish,Gulf,"4T, 4Vn",Shapefile,https://www.nafo.int/Data/GIS
+Herring - 4T (Fall Spawner) (Fixed Gear),Herring 4T (Fall Spawner) (Fixed Gear),Small Pelagics,Gulf,4T,Shapefile,https://www.nafo.int/Data/GIS
+Herring - 4T (Fall Spawner) (Mobile Gear),Herring 4T (Fall Spawner) (Mobile Gear),Small Pelagics,Gulf,4T,Shapefile,https://www.nafo.int/Data/GIS
+Herring - 4T (Spring Spawner),Herring 4T (Spring Spawner),Small Pelagics,Gulf,4T,Shapefile,https://www.nafo.int/Data/GIS
+"Lobster - Southern Gulf (LFA 23, 24, 25, 26A, 26B)","Lobster Southern Gulf - LFA 23,24,25,26A,26B",Crustaceans,Gulf,"LFA 23, 24, 25, 26A, 26B",Coordinates,http://www.glf.dfo-mpo.gc.ca/Gulf/Fishing-Area-Maps/Lobster#bottom_map
+"Rock Crab - CFA 23, 24, 25, 26A","Rock Crab LFA 23,24,25,26A and 26B",Crustaceans,Gulf,"LFA 23, 24, 25, 26A",Coordinates,http://www.glf.dfo-mpo.gc.ca/Gulf/Fishing-Area-Maps/Rock-Crab
+"Scallop - Southern Gulf of St. Lawrence (SFA 21a, b, c, 22, 23, 24)","Scallop - Southern Gulf of St. Lawrence (SFA 21a, b, c, 22, 23, 24)",Molluscs,Gulf,"SFA 21A, 21B, 21C, 22, 23, 24)",Coordinates,http://www.glf.dfo-mpo.gc.ca/Gulf/Fishing-Area-Maps/Scallop
+"Snow Crab - CFA 12 (12, 18, 25, 26), 12E, 12F, 19","Snow Crab CFA 12 (12, 18, 25, 26), 12E, 12F and 19",Crustaceans,Gulf,"CFA 12, 18, 25, 26, 12E, 12F, 19",Coordinates,http://www.glf.dfo-mpo.gc.ca/Gulf/Fishing-Area-Maps/Snow-Crab
+White Hake - 4T,White Hake 4T,Groundfish,Gulf,4T,Shapefile,https://www.nafo.int/Data/GIS
+Winter Flounder - 4RST,Winter Flounder 4RST,Groundfish,Gulf,4RST,Shapefile,https://www.nafo.int/Data/GIS
+Witch Flounder - 4RST,Witch Flounder 4RST,Groundfish,Gulf,4RST,Shapefile,https://www.nafo.int/Data/GIS
+Atlantic Canada Dogfish - 4VWNX - 5,Atlantic Canada Dogfish - 4VWNX - 5,Groundfish,Maritimes,4Vn,Shapefile,https://www.nafo.int/Data/GIS
+Atlantic Cod - 4X5Y,Atlantic Cod - 4X5Y,Groundfish,Maritimes,NA,NA,NA
+Atlantic Cod - 5Zjm,Atlantic Cod - 5Zjm,Groundfish,Maritimes,NA,NA,NA
+Atlantic Halibut - 3NOPs4VWX+5,Atlantic Halibut 3NOPs4VWX+5,Groundfish,Maritimes,NA,NA,NA
+Eel (Large),Eel (Large),Other,Maritimes,NA,NA,NA
+Elvers,Elvers,Other,Maritimes,NA,NA,NA
+Gaspereau - ???,Gaspereau,Small Pelagics,Maritimes,NA,NA,NA
+Haddock - 4X5Y,Haddock 4X5Y,Groundfish,Maritimes,NA,NA,NA
+Haddock - 5Zjm,Haddock 5Zjm,Groundfish,Maritimes,NA,NA,NA
+Herring - 4VWX,Herring 4VWX,Small Pelagics,Maritimes,NA,NA,NA
+"Herring - 5Y, 5Z (weirs)","Herring 5Y, 5Z (weirs)",Small Pelagics,Maritimes,NA,NA,NA
+Lobster - Inshore LFA 27-33,Lobster - Inshore LFA 27-33,Crustaceans,Maritimes,NA,NA,NA
+Lobster - Inshore LFA 34,Lobster - Inshore LFA 34,Crustaceans,Maritimes,NA,NA,NA
+Lobster - Inshore LFA 35-38,Lobster - Inshore LFA 35-38,Crustaceans,Maritimes,NA,NA,NA
+Lobster - Offshore LFA 41,Lobster - Offshore LFA 41,Crustaceans,Maritimes,NA,NA,NA
+Pollock - 4X5 (Western Component),Pollock 4X5 (Western Component),Groundfish,Maritimes,NA,NA,NA
+Redfish - Unit 3,Redfish Unit 3,Groundfish,Maritimes,NA,NA,NA
+Sea Scallop - Inshore SFA 28 (Bay of Fundy),Sea Scallop - Inshore SFA 28 (Bay of Fundy),Molluscs,Maritimes,NA,NA,NA
+Sea Scallop - Inshore SFA 29W,Sea Scallop - Inshore SFA 29W,Molluscs,Maritimes,NA,NA,NA
+"Sea Scallop - Offshore SFA 26 German, Browns","Sea Scallop - Offshore SFA 26 German, Browns",Molluscs,Maritimes,NA,NA,NA
+"Sea Scallop - Offshore SFA 27, Georges","Sea Scallop - Offshore SFA 27, Georges",Molluscs,Maritimes,NA,NA,NA
+Shrimp - Scotian Shelf (SFA 13-15),Shrimp (Scotian Shelf) - SFA 13-15,Crustaceans,Maritimes,NA,NA,NA
+Silver Hake - 4VWX,Silver Hake 4VWX,Groundfish,Maritimes,4Vn,Shapefile,https://www.nafo.int/Data/GIS
+Snow Crab - Scotian Shelf (4X),Snow Crab (Scotian Shelf ) 4X,Crustaceans,Maritimes,NA,NA,NA
+Snow Crab - Scotian Shelf (ENS-N),Snow Crab (Scotian Shelf ) ENS-N,Crustaceans,Maritimes,NA,NA,NA
+Snow Crab - Scotian Shelf (ENS-S),Snow Crab (Scotian Shelf ) ENS-S,Crustaceans,Maritimes,NA,NA,NA
+Striped Bass - Bay of Fundy,Striped Bass- Bay of Fundy,Small Pelagics,Maritimes,NA,NA,NA
+Surf Clam - Banquereau,Surf Clam - Banquereau,Molluscs,Maritimes,NA,NA,NA
+Surf Clam - Grand Bank,Surf Clam - Grand Bank,Molluscs,Maritimes,NA,NA,NA
+Swordfish - North Atlantic,Swordfish (North Atlantic),Large Pelagics,Maritimes,NA,NA,NA
+Yellowtail Flounder - 5Z,Yellowtail Flounder - 5Z,Groundfish,Maritimes,NA,NA,NA
+Bluefin Tuna - Western Atlantic,Bluefin Tuna - Western Atlantic,Large Pelagics,National Capital Region,4,Shapefile,https://www.nafo.int/Data/GIS
+Mackerel - Atlantic (NAFO 3-4),Mackerel (Atlantic) NAFO 3-4,Small Pelagics,National Capital Region,4,Shapefile,https://www.nafo.int/Data/GIS
+Northern Shrimp - SFA 5,Northern Shrimp SFA 5,Crustaceans,National Capital Region,NA,NA,NA
+Northern Shrimp - SFA 6,Northern Shrimp SFA 6,Crustaceans,National Capital Region,NA,NA,NA
+Northern Shrimp - SFA 7,Northern Shrimp – SFA 7,Crustaceans,National Capital Region,NA,NA,NA
+Northern Shrimp (Borealis) - Eastern Assessment Zone,Northern Shrimp (Borealis) – Eastern Assessment Zone,Crustaceans,National Capital Region,NA,NA,NA
+Northern Shrimp (Borealis) - SFA 1,Northern Shrimp (Borealis) – SFA 1,Crustaceans,National Capital Region,NA,NA,NA
+Northern Shrimp (Borealis) - SFA 4,Northern Shrimp SFA 4 (Borealis),Crustaceans,National Capital Region,NA,NA,NA
+Northern Shrimp (Borealis) - WAZ,Northern Shrimp WAZ borealis,Crustaceans,National Capital Region,NA,NA,NA
+Northern Shrimp (Montagui) - SFA 4,Northern Shrimp SFA 4 (Montagui),Crustaceans,National Capital Region,NA,NA,NA
+Northern Shrimp (Montagui) - WAZ,Northern Shrimp WAZ montagui,Crustaceans,National Capital Region,NA,NA,NA
+Striped Shrimp (Montagui) – Eastern Assessment Zone,Striped Shrimp (Montagui) – Eastern Assessment Zone,Crustaceans,National Capital Region,NA,NA,NA
+American Lobster - LFA 3-14c,American Lobster LFA 3-14c,Crustaceans,Newfoundland and Labrador,"LFA 13, 14",Coordinates,https://laws-lois.justice.gc.ca/eng/regulations/sor-86-21/FullText.html
+Atlantic Salmon - NL,NL - Atlantic Salmon,Salmonids,Newfoundland and Labrador,Newfoundland,,
+Capelin - 4RST,Capelin 4RST,Small Pelagics,Newfoundland and Labrador,4RST,Shapefile,https://www.nafo.int/Data/GIS
+Capelin - SA2+3KLPs,Capelin SA2+3KLPs,Small Pelagics,Newfoundland and Labrador,NA,NA,NA
+Cod - Atlantic (3Ps),Cod – 3Ps (Atlantic),Groundfish,Newfoundland and Labrador,NA,NA,NA
+Cod - Northern (2J3KL),Cod – 2J3KL (Northern),Groundfish,Newfoundland and Labrador,NA,NA,NA
+Greenland Halibut (Turbot) - 2-3KLMNO,Greenland Halibut 2-3KLMNO (Turbot),Groundfish,Newfoundland and Labrador,NA,NA,NA
+Herring - 2J3IKLPs,Herring 2J3IKLPs,Small Pelagics,Newfoundland and Labrador,NA,NA,NA
+Herring - 4R (Fall Spawner) / (Spring Spawner),Herring 4R (Fall Spawner) / Herring 4R (Spring Spawner),Small Pelagics,Newfoundland and Labrador,4R,Shapefile,https://www.nafo.int/Data/GIS
+Queen / Snow Crab - CFA 1-12,Queen / Snow Crab – CFA 1-12,Crustaceans,Newfoundland and Labrador,CFA 12NL,Coordinates,https://laws-lois.justice.gc.ca/eng/regulations/sor-86-21/FullText.html
+Redfish - 3LN,Redfish 3LN,Groundfish,Newfoundland and Labrador,NA,NA,NA
+Redfish - 3O,Redfish 3O,Groundfish,Newfoundland and Labrador,NA,NA,NA
+Redfish - Unit 2,Redfish Unit 2,Groundfish,Newfoundland and Labrador,NA,NA,NA
+Sea Cucumber - 3Ps,Sea Cucumber 3Ps,Other,Newfoundland and Labrador,NA,NA,NA
+Skate - 3LNO,Skate 3LNO,Groundfish,Newfoundland and Labrador,NA,NA,NA
+Whelk - 3PS,Whelk 3PS,Molluscs,Newfoundland and Labrador,NA,NA,NA
+White Hake - 3NOPs,White Hake – 3NOPs,Groundfish,Newfoundland and Labrador,NA,NA,NA
+Witch Flounder - 3NO,Witch Flounder – 3NO,Groundfish,Newfoundland and Labrador,NA,NA,NA
+Witch Flounder - 3Ps,Witch Flounder 3Ps,Groundfish,Newfoundland and Labrador,NA,NA,NA
+Yellowtail Flounder - 3LNO,Yellowtail Flounder – 3LNO,Groundfish,Newfoundland and Labrador,NA,NA,NA
+Albacore Tuna - North Pacific,Albacore Tuna (North Pacific),Small Pelagics,Pacific,NA,NA,NA
+Bocaccio Rockfish,Bocaccio Rockfish,Groundfish,Pacific,NA,NA,NA
+Canary Rockfish,Canary Rockfish,Groundfish,Pacific,NA,NA,NA
+Chinook Salmon - Yukon,Yukon Chinook,Salmonids,Pacific,NA,NA,NA
+Chinook Salmon (AABM) - North Coast,North Coast AABM Chinook,Salmonids,Pacific,NA,NA,NA
+Chinook Salmon (AABM) - WCVI,WCVI AABM Chinook,Salmonids,Pacific,NA,NA,NA
+Coho Salmon - North Coast,North Coast Coho,Salmonids,Pacific,NA,NA,NA
+Dogfish - Inside,Dogfish - inside,Groundfish,Pacific,NA,NA,NA
+Dogfish - Outside,Dogfish - outside,Groundfish,Pacific,NA,NA,NA
+Dungeness Crab,Dungeness Crab,Crustaceans,Pacific,NA,NA,NA
+Eulachon - Fraser River,Eulachon (Fraser River ),Small Pelagics,Pacific,NA,NA,NA
+Euphausiids,Euphausiids,Crustaceans,Pacific,NA,NA,NA
+Geoduck,Geoduck,Molluscs,Pacific,NA,NA,NA
+Green Sea Urchin,Green Sea Urchin,Other,Pacific,NA,NA,NA
+Herring - Central Coast (Pacific),Herring Central Coast (Pacific),Small Pelagics,Pacific,NA,NA,NA
+Herring - Haida Gwaii (Pacific),Herring Haida Gwaii (Pacific),Small Pelagics,Pacific,NA,NA,NA
+Herring - Prince Rupert District (North Coast / Pacific),Herring Prince Rupert District (North Coast) (Pacific),Small Pelagics,Pacific,NA,NA,NA
+Herring - Strait of Georgia (Pacific,Herring Strait of Georgia (Pacific),Small Pelagics,Pacific,NA,NA,NA
+Herring - WCVI,Herring WCVI,Small Pelagics,Pacific,NA,NA,NA
+Intertidal Clams - Central Coast-Heiltsuk Manila,Intertidal Clam (Central Coast - Heiltsuk Manila),Molluscs,Pacific,NA,NA,NA
+Intertidal Clams - Depuration,Intertidal Clams - Depuration,Molluscs,Pacific,NA,NA,NA
+Intertidal Clams - North Coast Haida Gwaii Razor,Intertidal Clam (North Coast Haida Gwaii Razor),Molluscs,Pacific,NA,NA,NA
+Intertidal Clams - South Coast-Vancouver Island,Intertidal Clams (South Coast- Vancouver Island),Molluscs,Pacific,NA,NA,NA
+Longspine Thornyhead,Longspine Thornyhead,Groundfish,Pacific,NA,NA,NA
+Pacific Hake,Pacific Hake,Groundfish,Pacific,NA,NA,NA
+Pacific Halibut,Pacific Halibut,Groundfish,Pacific,NA,NA,NA
+Pacific Lingcod,Pacific Lingcod,Groundfish,Pacific,NA,NA,NA
+Pacific Ocean Perch - PMFC 3CD-WCVI,Pacific Ocean Perch PMFC 3CD-WCVI,Groundfish,Pacific,NA,NA,NA
+Pacific Ocean Perch - PMFC 5ABC-QCS,Pacific Ocean Perch PMFC 5ABC-QCS,Crustaceans,Pacific,NA,NA,NA
+Pacific Ocean Perch - PMFC 5DE-HS/DE/WHG,Pacific Ocean Perch PMFC 5DE-HS/DE/WHG,Groundfish,Pacific,NA,NA,NA
+Pacific Oyster,Pacific Oyster,Molluscs,Pacific,NA,NA,NA
+Pink and Spiny Scallop,Pink and Spiny Scallop,Molluscs,Pacific,NA,NA,NA
+Pink Salmon - Fraser,Fraser pink,Salmonids,Pacific,NA,NA,NA
+Pink Salmon - Skeena-Nass,Skeena-Nass pink,Salmonids,Pacific,NA,NA,NA
+Prawn Trap,Prawn Trap,Crustaceans,Pacific,NA,NA,NA
+Quillback Rockfish - Inside,Quillback Rockfish (Inside),Groundfish,Pacific,NA,NA,NA
+Quillback Rockfish - Outside,Quillback Rockfish (Outside),Groundfish,Pacific,NA,NA,NA
+Red Sea Urchin,Red Sea Urchin,Other,Pacific,NA,NA,NA
+Rougheye Rockfish,Rougheye Rockfish,Groundfish,Pacific,NA,NA,NA
+Sablefish,Sablefish,Groundfish,Pacific,NA,NA,NA
+Sardine - Pacific,Sardine (Pacific),Small Pelagics,Pacific,NA,NA,NA
+Sea Cucumber,Sea Cucumber,other,Pacific,NA,NA,NA
+Shrimp Trawl,Shrimp Trawl,Crustaceans,Pacific,NA,NA,NA
+Sockeye Salmon - Fraser (Early Late),Fraser sockeye - Late,Salmonids,Pacific,NA,NA,NA
+Sockeye Salmon - Fraser (Early Stuart),Fraser sockeye - Early Stuart,Salmonids,Pacific,NA,NA,NA
+Sockeye Salmon - Fraser (Early Summer),Fraser sockeye - Early summer,Salmonids,Pacific,NA,NA,NA
+Sockeye Salmon - Fraser (Summer Summer),Fraser sockeye - Summer,Salmonids,Pacific,NA,NA,NA
+Sockeye Salmon - Nass,Nass sockeye,Salmonids,Pacific,NA,NA,NA
+Sockeye Salmon - Skeena,Skeena sockeye,Salmonids,Pacific,NA,NA,NA
+Sockeye Salmon - Somass,Somass Sockeye,Salmonids,Pacific,NA,NA,NA
+Sockeye Salmon - Stikine,Stikine Sockeye,Salmonids,Pacific,NA,NA,NA
+Southern Inside chum - Fraser,Southern Inside chum- Fraser,Salmonids,Pacific,NA,NA,NA
+"Southern Inside chum - mixed stock, Johnstone Strait","Southern Inside chum – mixed stock, Johnstone Strait",Salmonids,Pacific,NA,NA,NA
+Yelloweye Rockfish - Inside Population,Yelloweye Rockfish - Inside Population,Groundfish,Pacific,NA,NA,NA
+Yelloweye Rockfish - Outside Population,Yelloweye Rockfish - Outside Population,Groundfish,Pacific,NA,NA,NA
+Yellowmouth Rockfish,Yellowmouth Rockfish,Groundfish,Pacific,NA,NA,NA
+Atlantic Halibut - 4RST,Atlantic Halibut (4RST),Groundfish,Quebec,4RST,Shapefile,https://www.nafo.int/Data/GIS
+Beluga - Northern Quebec (Nunavik),Northern Quebec (Nunavik) Beluga,Marine Mammals,Quebec,NA,NA,NA
+Cod - 4RS­3Pn,Cod – 4RS­3Pn,Groundfish,Quebec,4RS,Shapefile,https://www.nafo.int/Data/GIS
+Common Clam,Common Clam,Molluscs,Quebec,Quebec,,
+Greenland Halibut - 4RST,Greenland Halibut – 4RST,Groundfish,Quebec,4RST,Shapefile,https://www.nafo.int/Data/GIS
+Grey Seal,Grey Seal,Marine Mammals,Quebec,Quebec,,
+Gulf Shrimp,Gulf Shrimp,Crustaceans,Quebec,Quebec,,
+Harp Seal - Northwest Atlantic,"Harp Seal, Northwest Atlantic",Marine Mammals,Quebec,Quebec,,
+Herring - 4S,Herring (4S),Small Pelagics,Quebec,4S,Shapefile,https://www.nafo.int/Data/GIS
+Icelandic Scallop - 16EF-18A,Icelandic Scallop 16EF-18A,Molluscs,Quebec,"SFA 16E, 16F, 18A",Coordinates,http://www.qc.dfo-mpo.gc.ca/peches-fisheries/en/cartes/pdf/Petoncle_CN_Gaspe.pdf
+Icelandic Scallop - Area 20,Icelandic Scallop Area 20,Molluscs,Quebec,SFA 20,Coordinates,https://www.dfo-mpo.gc.ca/ea-ae/cat1/no1-5/no1-5-intro-eng.htm
+Lobster - 17,Lobster 17,Crustaceans,Quebec,LFA 17,Coordinates,http://www.qc.dfo-mpo.gc.ca/peches-fisheries/en/cartes/pdf/Homard.pdf
+Lobster - Areas 19-20-21 (Gaspé),Lobster – Areas 19-20-21 (Gaspé),Crustaceans,Quebec,"LFA 19, 20, 21",Coordinates,http://www.qc.dfo-mpo.gc.ca/peches-fisheries/en/cartes/pdf/Homard.pdf
+Lobster - Zone 22 (MI),Lobster – Zone 22 (MI),Crustaceans,Quebec,LFA 22,Coordinates,http://www.qc.dfo-mpo.gc.ca/peches-fisheries/en/cartes/pdf/Homard.pdf
+Redfish - Unit 1,Redfish – Unit 1,Groundfish,Quebec,Quebec,Shapefile,https://waves-vagues.dfo-mpo.gc.ca/Library/40713830.pdf
+Snow Crab - 12A,Snow Crab – 12A,Crustaceans,Quebec,CFA 12A,Coordinates,http://www.qc.dfo-mpo.gc.ca/peches-fisheries/en/cartes/pdf/Crabe_des_Neiges.pdf
+Snow Crab - 12B,Snow Crab – 12B,Crustaceans,Quebec,CFA 12B,Coordinates,http://www.qc.dfo-mpo.gc.ca/peches-fisheries/en/cartes/pdf/Crabe_des_Neiges.pdf
+Snow Crab - 12C,Snow Crab – 12C,Crustaceans,Quebec,CFA 12C,Coordinates,http://www.qc.dfo-mpo.gc.ca/peches-fisheries/en/cartes/pdf/Crabe_des_Neiges.pdf
+Snow Crab - 12F,Snow Crab – 12F,Crustaceans,Quebec,CFA 12F,Coordinates,http://www.qc.dfo-mpo.gc.ca/peches-fisheries/en/cartes/pdf/Crabe_des_Neiges.pdf
+Snow Crab - 13,Snow Crab – 13,Crustaceans,Quebec,CFA 13,Coordinates,http://www.qc.dfo-mpo.gc.ca/peches-fisheries/en/cartes/pdf/Crabe_des_Neiges.pdf
+Snow Crab - 14,Snow Crab – 14,Crustaceans,Quebec,CFA 14,Coordinates,http://www.qc.dfo-mpo.gc.ca/peches-fisheries/en/cartes/pdf/Crabe_des_Neiges.pdf
+Snow Crab - 15,Snow Crab – 15,Crustaceans,Quebec,CFA 15,Coordinates,http://www.qc.dfo-mpo.gc.ca/peches-fisheries/en/cartes/pdf/Crabe_des_Neiges.pdf
+Snow Crab - 16,Snow Crab – 16,Crustaceans,Quebec,CFA 16,Coordinates,http://www.qc.dfo-mpo.gc.ca/peches-fisheries/en/cartes/pdf/Crabe_des_Neiges.pdf
+Snow Crab - 16A,Snow Crab – 16A,Crustaceans,Quebec,CFA 16A,Coordinates,http://www.qc.dfo-mpo.gc.ca/peches-fisheries/en/cartes/pdf/Crabe_des_Neiges.pdf
+Snow Crab - 17,Snow Crab – 17,Crustaceans,Quebec,CFA 17,Coordinates,http://www.qc.dfo-mpo.gc.ca/peches-fisheries/en/cartes/pdf/Crabe_des_Neiges.pdf
+Stimpson's Surfclam,Stimpson's Surfclam,Molluscs,Quebec,"SSFA 1, 2, 3, 4, 5",Coordinates,http://www.qc.dfo-mpo.gc.ca/peches-fisheries/en/cartes/pdf/Mactre_Stimpson.pdf
