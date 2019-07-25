@@ -1,0 +1,9 @@
+region_id,region_name,flower_png
+0,Toolbox Demo,reports/figures/flower_ToolboxDemo.png
+1,Northwest Gulf,reports/figures/flower_NorthwestGulf.png
+2,Northeast Gulf,reports/figures/flower_NortheastGulf.png
+3,Central Gulf,reports/figures/flower_CentralGulf.png
+4,Mecatina,reports/figures/flower_Mecatina.png
+5,Madeleine Plateau,reports/figures/flower_MadeleinePlateau.png
+6,Northumberland Strait,reports/figures/flower_NorthumberlandStrait.png
+7,Chaleur Bay,reports/figures/flower_ChaleurBay.png
